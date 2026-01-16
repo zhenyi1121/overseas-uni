@@ -1,0 +1,100 @@
+.footer, .copy-right-area{
+    position: relative;
+    background-color: var(--mainColor);
+    color:white;
+    width:100%;
+}
+
+.footer{
+    margin:0;
+}
+
+/* Pink triangle */
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  /* Size of triangle */
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;  /* adjust size */
+  border-top: 140px solid var(--secondaryColor); 
+}
+
+.footer a{
+    font-size: 1.1rem;
+    color:white;
+    text-decoration:none;
+}
+
+.container{
+    margin-left:2rem;
+}
+
+.copy-right-area a{
+    color:white;
+}
+
+.footer-widget ul{
+    list-style-type: square;
+}
+
+.footer-widget ul li{
+    padding-bottom: 5px;
+}
+
+.footer-widget ul li a{
+    transition: var(--transition);
+}
+
+.footer-widget ul li a:hover{
+    text-decoration: underline;
+}
+
+.social-icons ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;             
+    padding: 0;
+    margin: 0;
+    list-style: none;      
+}
+
+.social-icons ul li {
+    list-style: none;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00cd4b;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+  background-color: #21984d;
+  color: white;
+}
+
+.whatsapp-float i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.whatsapp-text {
+  white-space: nowrap;
+}

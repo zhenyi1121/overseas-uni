@@ -1,0 +1,399 @@
+/*================================================
+Default CSS
+=================================================*/
+:root {
+  --font-family: "League Spartan", sans-serif !important;
+  --mainColor: #5e17eb;
+  --secondaryColor: #ff00bf;
+  /* --paragraphColor: #7A7A7A;
+  --paragraphColorSecond: #B9B9BA; */
+  --paragraphColorSecond: #ffffff;
+  --whiteColor: #ffffff;
+  --blackColor: black;
+  --fontSize: 16px;
+  --transition: .5s;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+
+p{
+  font-size: 1.1rem;
+}
+
+.banner-area{
+  height:220px;
+  background-repeat: no-repeat;
+}
+
+.banner-area h1{
+  position: relative;
+  font-size: 4.0rem;
+  padding:60px 60px;
+  height:100%;
+  color:white;
+  background-color: #5e17eb;
+  width:600px;
+  clip-path: polygon(0% 0%, 100% 0, 80% 60%, 100% 100%, 0% 100%);
+  /* mask-image: linear-gradient(to right, transparent, black 0%, black 70%, transparent); */
+}
+
+/* Pink triangle */
+.banner-area h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  /* Size of triangle */
+  width: 0;
+  height: 0;
+  /* border-left: 20px solid var(--secondaryColor);
+  border-right: 100px solid var(--secondaryColor);
+  border-top: 60px solid var(--secondaryColor);
+  border-bottom: 40px solid var(--secondaryColor); */
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 110px solid #ff00bf; 
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center !important;  /* center horizontally */
+}
+
+.container {
+    max-width: 1400px;        /* controls total width */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*================================================
+Home Page CSS
+=================================================*/
+.intro-section{
+    background-image: url(../img/banner/intro.jpg);
+    background-size: 2000px 1200px ;
+    object-fit: contain;
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    height:550px;
+    align-items: center;
+    mask-image: linear-gradient(to bottom, transparent, black 0%, black 50%, transparent);
+}
+
+.intro-description{
+    color:rgb(255, 255, 255);
+    font-weight:500;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    padding: 50px;
+    height: fit-content;
+    text-align: center;
+}
+
+.intro-description h2{
+    font-size:45px;
+}
+
+.intro-description p{
+    padding:20px 40px;
+    font-size:22px;
+    text-align: justify;
+}
+
+.index-btn{
+    display: inline-block;
+    color: white;
+    text-shadow:none;
+    font-size: 1.2rem;
+    background-color: var(--secondaryColor);
+    padding: 18px 44px;
+    text-decoration: none;
+    border-radius: 36px;
+    transition: var(--transition);  
+}
+
+.index-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.what-we-do{
+    padding:0px 40px;
+    width:80%;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.what-we-do h2{
+    text-align: center;
+    font-weight:bold;
+    padding:40px;
+    font-size: 50px;
+    align-items: center;
+    margin:10px 0px;
+}
+
+.what-we-do.bg-color-1 {
+  background-color: var(--secondaryColor);
+}
+
+.bg-color-1 .academics-item {
+  border: 1px solid var(--whiteColor);
+}
+
+.academics-item.active {
+  background-color: var(--whiteColor);
+}
+
+.bg-color-1 .academics-item:hover {
+  background-color: var(--whiteColor);
+}
+
+.academics-item {
+  padding: 45px 40px;
+  height: 380px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 3px solid var(--mainColor);
+  transition: var(--transition);
+  border-radius: 18px;
+  background-color: #eae5ff51;
+}
+
+.academics-item img {
+  margin-bottom: 20px;
+  height:50px;
+}
+
+.academics-item h4 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight:bold;
+  font-family: 'Lexend', sans-serif;
+}
+
+.what-we-do .academics-item p {
+  margin-bottom: 20px;
+}
+
+.academics-item a {
+  font-weight: 500;
+  color: var(--secondaryColor);
+  position: relative;
+  justify-content: center;
+  bottom:0px;
+  font-size: 1.2rem;
+}
+
+.academics-item a i {
+  position: absolute;
+  content: '';
+  top: 0px;
+  right: -30px;
+  font-size: 25px;
+  transition: var(--transition);
+}
+
+.academics-item a:hover i {
+  position: absolute;
+  content: '';
+  top: 0px;
+  right: -40px;
+  font-size: 25px;
+}
+
+/*================================================
+Countries Page CSS
+=================================================*/
+.countries-banner{
+  background-image: url(../img/banner/countries.jpg);
+  object-fit: contain;
+  background-position: center;
+  background-size:1800px 1200px;
+}
+
+.filter-section strong{
+  font-size: 1.4rem;
+}
+
+.alphabet-link{
+  color:black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.alphabet-link:hover{
+  color:var(--secondaryColor);
+  text-decoration: none;
+}
+
+/*================================================
+Universities Page CSS
+=================================================*/
+.uni-banner{
+  background-image: url(../img/banner/universities.jpg);
+  object-fit: contain;
+  background-position: center;
+  background-size:2000px 1020px;
+}
+
+
+/*================================================
+Courses Page CSS
+=================================================*/
+.courses-banner{
+  background-image: url(../img/banner/courses.jpg);
+  object-fit: contain;
+  background-position: center;
+  background-size:2000px 320px;
+}
+
+/*================================================
+What We Do Pages CSS
+=================================================*/
+
+/* Counseling Pages */
+.counseling-banner{
+  background-image: url(../img/banner/counseling.png);
+  background-size:1900px 1220px;
+  background-position: 50% 55%;
+}
+
+.slider-content img{
+  height:400px;
+}
+
+.slider-content strong{
+  font-size:1.2rem;
+}
+
+.swiper-pagination-bullet-active{
+  background:var(--secondaryColor) !important;
+}
+
+.counseling-description{
+  text-align: justify;
+  width:40%;
+}
+
+/* Trusted Partner Pages */
+.partner-banner{
+  background-image: url(../img/banner/partnership.jpg);
+  background-size:1900px 1020px;
+  background-position: 0% 75%;
+}
+
+.partner-banner h1{
+  font-size: 3.5rem;
+  padding:60px 80px;
+  width:700px;
+}
+
+.partner-banner h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  /* Size of triangle */
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 85px solid transparent;
+  border-bottom: 140px solid var(--secondaryColor); /* pink */
+}
+
+.partner-description li{
+  font-size:1.2rem;
+  font-weight:bold;
+}
+
+.partner-img{
+  width:550px;
+}
+
+/* Accomodation Arrangement Pages */
+.accomo-banner{
+  background-image: url(../img/banner/accommodation.jpg);
+  background-size:2000px 1220px;
+  background-position: -100% 50%;
+}
+
+.accomo-banner h1{
+  font-size: 3.5rem;
+  padding:40px 60px;
+  width:700px;
+}
+
+.accomo-banner h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  /* Size of triangle */
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 85px solid transparent;
+  border-bottom: 140px solid var(--secondaryColor); /* pink */
+}
+
+/* Application Services Pages */
+.application-banner{
+  background-image: url(../img/banner/application-services.png);
+  background-size:2100px 1020px;
+  background-position: 0% 75%;
+}
+
+.application-banner h1{
+  font-size: 3.5rem;
+  padding:40px 60px;
+}
+
+/* Workshops Pages */
+.workshop-banner{
+  background-image: url(../img/banner/workshops.jpg);
+  background-size:2100px 1120px;
+  background-position: -10% 40%;
+}
+
+/*================================================
+Contact Us Page CSS
+=================================================*/
+.contact-banner{
+  background-image: url(../img/banner/contact-us.jpg);
+  background-position: 20% 50%;
+  background-size:2100px 1420px;
+}
+
+.contact-wrapper{
+  border:2px var(--mainColor) solid;
+  background-color: #ad84ff94;
+  border-radius:12px;
+  flex-direction: column;
+}
+
+.form-group{
+  display:flex;
+  flex-direction: row;
+  /* border:2px grey solid; */
+  border-radius:8px;
+  background-color: #ffffff;
+}
+
+.form-group i{
+  vertical-align: middle;
+  align-self: center;
+  top:50%;
+}
+
+.form-group input{
+  border:none;
+}
+
